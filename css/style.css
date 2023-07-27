@@ -1,0 +1,270 @@
+h1 {
+  color: red;
+  text-align: center;
+  text-shadow: 4px  4px  5px  rgb(71, 10, 0);
+}
+
+.title {
+  color: rgb(20, 99, 26)
+}
+
+#italic {
+  color: orange;
+}
+
+nav {
+  background-color: aquamarine;
+  text-align: right;
+}
+
+.nav-wrapper {
+  background-color: blue;
+}
+
+a {
+  text-decoration-line: none;
+  }
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  padding: 30px;
+}
+
+.container {
+  /* border: 5px  solid  grey; */
+  border: 10px  dashed  blueviolet;
+  margin-top: 50px 5px 25px 0px;
+  padding: 30px  0px  10px  35px;;
+}
+
+.box {
+  /* display: inline-block;  This is a conflict with the flexbox. */
+  height: 200px;
+  width: 200px;
+  background: blue;
+  margin: 10px;
+  /* box-shadow: 8px 8px 30px 40px rgb(154, 159, 160);*/
+  } 
+  
+  @keyframes fadeMe {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+    
+    #box1 {
+      animation-name: fadeMe;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    
+    @keyframes rotation {
+      0% {transform: rotate(90deg);}
+      50% {transform: rotate(180deg);}
+      100% {transform: rotate(360deg);}
+      }
+
+    #box2 {
+      animation-name: rotation;
+      animation-duration: 2s;
+      animation-iteration-count: 4s;
+      animation-timing-function: ease;
+      border-radius: 10%;
+      background-image: radial-gradient(circle, purple, orange, yellow,
+      pink, purple);
+    }
+    
+    @keyframes getBigger {
+      0% {transform: scale(1);}
+      50% {transform: scale(2);}
+      100% {transform: scale(.5);}
+    }
+
+    #box3 {
+      animation: getBigger  infinite  8s  ease-in;
+      border-radius: 50%;
+      background: orange;
+    }
+
+    @keyframes changeColors {
+      0% {background-color: grey;}
+      25% {background-color: purple;}
+      50% {background-color: yellow;}
+      75% {background-color: pink;}
+      100% {background-color: grey;}
+    }
+
+    #box4 {
+      animation: changeColors 3s 2s forwards;
+      }
+
+    @keyframes moveBox {
+      0% {left: 0px;  top: 0px;}
+      25% {left: 100px;  top: 0px;}
+      50% {left: 100px;  top: 200px;}
+      75% {left: 0px;  top: 200px;}
+      100% {left: 0px;  top: 0px;}
+    } 
+
+    #box5 {
+      position: relative;
+      background: red;
+      animation: moveBox  5s  3s;
+
+    }
+    
+    #box6 {
+      top: 10px;
+      left: 20px;
+      position: relative;
+      /* position: absolute; */      e
+      /* position: fixed; */
+    }
+
+    /* body {
+
+    }  */
+
+    /* The following did not work for me in style.css; however, it di work in the index.html file. */
+    html {
+      /* background-image: linear-gradient(to right, blue, green, purple); */
+      background-image: radial-gradient(to right, blue, green, purple);
+    }
+
+      /* background-image: url("PDR_0063.jpg");
+      background-image:  url("20190322_Charlie.jpg");
+      background-image: ur("https: //encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRjTVwONsM6gg1B_SbNyw9kpQ-j_q2vbYN1a6ia-CInLnX6-qEJEMxi2XdP6IFM8dn-unIUu6tGhjaMUDg")
+    
+      backgound-repeat: no-repeat;
+     /* background-image: url("20210610_Charlie & Me.jpg"); 
+     background-image: images/20210610_Charlie & Me.jpg; */
+    /* background-image: url(imrrc.club); *?
+     /* background-image: url('https://www.tutorialkart.com/sample_image.jpg'); */
+    /* Background-image: url{"PDR_0063"}  */
+      background-size: cover; 
+    } */
+         
+  .circle-img {
+  border-radius: 50%;
+}
+
+img {
+  box-shadow: 8px  8px  10px  8px    rgb(154, 159, 160) inset;
+} 
+
+.flexbox /*  This could be written/coded as .flex */ {
+  margin: 30px;
+  border: 3px  solid  black;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: space-between; */
+  justify-content: space-around;
+  /* padding: 100px; */
+  margin: 30px; 
+  /* flex-direction: row-reverse; */
+  flex-direction: column-reverse;
+}
+
+.contact-box {
+  display: flex;
+  justify-content: center;
+}  
+
+.row{
+  margin: 30px;
+}  
+
+.input-field {
+  margin: 20px;
+} 
+
+form input, textarea, button {
+  display: block
+  margin: 30px;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, [col] 296px);
+  grid-template-rows: repeat(3, [row] auto);
+  background-color: #fff;
+  color: #444;
+}
+
+.Box {
+  background-color: #fff
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  z-index: 10;
+
+}
+
+.a {
+  /* grid-column: col / span 2; */
+  grid-column: col / span 3;
+  /* grid-row: row; */
+  grid-row: row  3;
+  display: flex;
+  justify-content: center;
+}
+
+.b {
+  /* grid-column: col 3 / span 3; */
+  grid-column: col 4 / span 2;
+  grid-row: row;
+  display: flex;
+  justify-content: center;
+}
+
+.c {
+  /* grid-column:  col / span ; */
+  grid-column: col / span 5;
+  grid-row: row 2;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(pink, yellow, purple, orange);
+}
+
+.d {
+  /* grid-column: col 2 / span 3; */
+  /* grid-column: col 2 / span 1; */
+  grid-column: col  / span 3;
+ /* grid-row: row 2; */
+grid-row: row 3;
+display: flex;
+justify-content: center;
+}
+
+.e {
+  /* grid-column: col / span 5; */
+  /* grid-column: col 4 / span 1; */
+  grid-column: col 3 / span 3;
+  grid-row: row 3;
+  display: flex;
+  justify-content: center;
+}
+
+.f {
+  /* grid-column: col 2 / span 3; */
+  grid-column: col 3 / span 2;
+  grid-row: row 2;
+  background-color: rgba(49, 121, 207, 0.5);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(orange, purple, yellow, pink);
+}

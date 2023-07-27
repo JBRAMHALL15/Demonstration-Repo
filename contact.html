@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      background-color: white;
+      color: blue;
+      background-image: url("PDR_0063.JPG");
+    }
+  </style>
+  <title>Contact Page</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  
+  <h1>Contact Me</h1>
+
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Contact Me</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+      
+        <a href="index.html"><li>Home</li></a>
+        <a href="about.html"><li>About</li></a>
+        <a href="contact.html"><li>Contact</li>
+        <a href="contactDemo.html">Contact Demo</a>
+      </ul>
+    </nav>
+  </header>
+
+<p>Welcome to the Contact page!</p>
+
+<form>
+  <input type="text"  name="name"  placeholder="Full Name" required>
+  <br><br>
+  <input type="email"  name="email" placeholder="Email" required>
+  <br><br>
+  <input type="tel"  name="phone_num"  placeholder="(555) 422-5555" 
+  pattern="[\(]\d{3}[\)]\d{3}[\-]\d{4}" required>  <!-- You do not need to include the pattern -->
+  <br><br>
+  <textarea name="message"  placeholder="Your Message"></textarea>
+  <br><br>
+  <button type="Submit">Submit</button>
+</form>
+
+<!--- <textarea name="" id=""  cols="30"  rows="10"></textarea>
+<button></button>  (These two lines of code are not needed.) -->
+
+</body>
+</html>
